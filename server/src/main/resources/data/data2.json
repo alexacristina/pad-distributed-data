@@ -1,0 +1,128 @@
+[
+    {
+        "department": "Information Technology",
+        "first_name": "Johan",
+        "last_name": "Bashirian",
+        "salary": 7600
+    },
+    {
+        "department": "Production Department",
+        "first_name": "Earley",
+        "last_name": "Nikolaus",
+        "salary": 4300
+    },
+    {
+        "department": "Sales",
+        "first_name": "Aili",
+        "last_name": "Cormier",
+        "salary": 700
+    },
+    {
+        "department": "Accounting",
+        "first_name": "Connie",
+        "last_name": "Jacobson",
+        "salary": 5200
+    },
+    {
+        "department": "Public Relations",
+        "first_name": "Ruby",
+        "last_name": "Murray",
+        "salary": 3400
+    },
+    {
+        "department": "Information Technology",
+        "first_name": "Verle",
+        "last_name": "Macejkovic",
+        "salary": 2100
+    },
+    {
+        "department": "Information Technology",
+        "first_name": "Montie",
+        "last_name": "Howell",
+        "salary": 8100
+    },
+    {
+        "department": "Human Resources",
+        "first_name": "Moira",
+        "last_name": "Williamson",
+        "salary": 5300
+    },
+    {
+        "department": "Public Relations",
+        "first_name": "Tennessee",
+        "last_name": "Heller",
+        "salary": 2000
+    },
+    {
+        "department": "Public Relations",
+        "first_name": "Arlington",
+        "last_name": "Bartoletti",
+        "salary": 6700
+    },
+    {
+        "department": "Human Resources",
+        "first_name": "Villa",
+        "last_name": "Auer",
+        "salary": 4500
+    },
+    {
+        "department": "Sales",
+        "first_name": "Earlie",
+        "last_name": "Rempel",
+        "salary": 3200
+    },
+    {
+        "department": "Information Technology",
+        "first_name": "Delwin",
+        "last_name": "Grant",
+        "salary": 7600
+    },
+    {
+        "department": "Information Technology",
+        "first_name": "Henretta",
+        "last_name": "Harber",
+        "salary": 6300
+    },
+    {
+        "department": "Public Relations",
+        "first_name": "Kami",
+        "last_name": "Lehner",
+        "salary": 1700
+    },
+    {
+        "department": "Production Department",
+        "first_name": "Melony",
+        "last_name": "Boehm",
+        "salary": 8100
+    },
+    {
+        "department": "Human Resources",
+        "first_name": "Andres",
+        "last_name": "Rohan",
+        "salary": 7200
+    },
+    {
+        "department": "Information Technology",
+        "first_name": "Clyda",
+        "last_name": "McKenzie",
+        "salary": 1200
+    },
+    {
+        "department": "Human Resources",
+        "first_name": "Iver",
+        "last_name": "Johnston",
+        "salary": 7300
+    },
+    {
+        "department": "Sales",
+        "first_name": "Carleen",
+        "last_name": "Thiel",
+        "salary": 1500
+    },
+    {
+        "department": "Sales",
+        "first_name": "Cherilyn",
+        "last_name": "Bins",
+        "salary": 3900
+    }
+]

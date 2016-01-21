@@ -1,0 +1,3 @@
+include 'client', 'service', 'server'
+
+rootProject.name = 'lab_dis'

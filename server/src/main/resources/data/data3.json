@@ -1,0 +1,128 @@
+[
+    {
+        "department": "Public Relations",
+        "first_name": "Travis",
+        "last_name": "Ernser",
+        "salary": 7200
+    },
+    {
+        "department": "Human Resources",
+        "first_name": "Sadye",
+        "last_name": "Raynor",
+        "salary": 4300
+    },
+    {
+        "department": "Administration",
+        "first_name": "Terence",
+        "last_name": "Simonis",
+        "salary": 8400
+    },
+    {
+        "department": "Public Relations",
+        "first_name": "Kaylin",
+        "last_name": "Hessel",
+        "salary": 3800
+    },
+    {
+        "department": "Accounting",
+        "first_name": "Elijah",
+        "last_name": "Nikolaus",
+        "salary": 2000
+    },
+    {
+        "department": "Public Relations",
+        "first_name": "Harve",
+        "last_name": "Larson",
+        "salary": 2600
+    },
+    {
+        "department": "Information Technology",
+        "first_name": "Gerald",
+        "last_name": "Schuppe",
+        "salary": 8600
+    },
+    {
+        "department": "Public Relations",
+        "first_name": "Jordin",
+        "last_name": "Jerde",
+        "salary": 3000
+    },
+    {
+        "department": "Human Resources",
+        "first_name": "Domenica",
+        "last_name": "Bernhard",
+        "salary": 9200
+    },
+    {
+        "department": "Administration",
+        "first_name": "Tamera",
+        "last_name": "Zieme",
+        "salary": 4000
+    },
+    {
+        "department": "Public Relations",
+        "first_name": "Mafalda",
+        "last_name": "Gerhold",
+        "salary": 9400
+    },
+    {
+        "department": "Production Department",
+        "first_name": "Deana",
+        "last_name": "Barton",
+        "salary": 3200
+    },
+    {
+        "department": "Production Department",
+        "first_name": "Landin",
+        "last_name": "Walsh",
+        "salary": 2800
+    },
+    {
+        "department": "Sales",
+        "first_name": "Phillip",
+        "last_name": "Schuppe",
+        "salary": 8400
+    },
+    {
+        "department": "Administration",
+        "first_name": "John",
+        "last_name": "Hartmann",
+        "salary": 7600
+    },
+    {
+        "department": "Human Resources",
+        "first_name": "Floy",
+        "last_name": "Bartoletti",
+        "salary": 6900
+    },
+    {
+        "department": "Accounting",
+        "first_name": "Wilhelmina",
+        "last_name": "Sporer",
+        "salary": 2900
+    },
+    {
+        "department": "Human Resources",
+        "first_name": "Amani",
+        "last_name": "Langosh",
+        "salary": 7000
+    },
+    {
+        "department": "Human Resources",
+        "first_name": "Deshaun",
+        "last_name": "Abernathy",
+        "salary": 1000
+    },
+    {
+        "department": "Human Resources",
+        "first_name": "Brendan",
+        "last_name": "Beier",
+        "salary": 1600
+    },
+    {
+        "department": "Information Technology",
+        "first_name": "Johan",
+        "last_name": "Bashirian",
+        "salary": 7600
+    }
+]

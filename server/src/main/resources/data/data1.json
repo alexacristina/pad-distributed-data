@@ -1,0 +1,128 @@
+[
+    {
+        "department": "Sales",
+        "first_name": "Cherilyn",
+        "last_name": "Bins",
+        "salary": 3900
+    },
+    {
+        "department": "Accounting",
+        "first_name": "Hebert",
+        "last_name": "Fisher",
+        "salary": 3200
+    },
+    {
+        "department": "Information Technology",
+        "first_name": "Odis",
+        "last_name": "Fisher",
+        "salary": 4500
+    },
+    {
+        "department": "Information Technology",
+        "first_name": "Debra",
+        "last_name": "Mraz",
+        "salary": 1800
+    },
+    {
+        "department": "Production Department",
+        "first_name": "Carmel",
+        "last_name": "Hahn",
+        "salary": 8400
+    },
+    {
+        "department": "Sales",
+        "first_name": "Yetta",
+        "last_name": "Kuphal",
+        "salary": 7200
+    },
+    {
+        "department": "Accounting",
+        "first_name": "Rena",
+        "last_name": "Johnson",
+        "salary": 4900
+    },
+    {
+        "department": "Public Relations",
+        "first_name": "Cesar",
+        "last_name": "Stehr",
+        "salary": 5400
+    },
+    {
+        "department": "Human Resources",
+        "first_name": "Giuliana",
+        "last_name": "Kshlerin",
+        "salary": 2500
+    },
+    {
+        "department": "Public Relations",
+        "first_name": "Grisel",
+        "last_name": "Kemmer",
+        "salary": 1500
+    },
+    {
+        "department": "Information Technology",
+        "first_name": "Karly",
+        "last_name": "Okuneva",
+        "salary": 7400
+    },
+    {
+        "department": "Public Relations",
+        "first_name": "Teresa",
+        "last_name": "Schroeder",
+        "salary": 7500
+    },
+    {
+        "department": "Production Department",
+        "first_name": "Clarine",
+        "last_name": "Will",
+        "salary": 5000
+    },
+    {
+        "department": "Administration",
+        "first_name": "Fidelia",
+        "last_name": "Auer",
+        "salary": 3300
+    },
+    {
+        "department": "Administration",
+        "first_name": "Darby",
+        "last_name": "Eichmann",
+        "salary": 5600
+    },
+    {
+        "department": "Accounting",
+        "first_name": "Jaxton",
+        "last_name": "Bahringer",
+        "salary": 1200
+    },
+    {
+        "department": "Production Department",
+        "first_name": "Emma",
+        "last_name": "Bernier",
+        "salary": 7000
+    },
+    {
+        "department": "Sales",
+        "first_name": "Eppie",
+        "last_name": "Abbott",
+        "salary": 4600
+    },
+    {
+        "department": "Sales",
+        "first_name": "Margaret",
+        "last_name": "Yundt",
+        "salary": 2100
+    },
+    {
+        "department": "Production Department",
+        "first_name": "Maurice",
+        "last_name": "Feest",
+        "salary": 700
+    },
+    {
+        "department": "Administration",
+        "first_name": "Cicely",
+        "last_name": "Hintz",
+        "salary": 9700
+    }
+]
