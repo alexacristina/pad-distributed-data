@@ -16,6 +16,8 @@ public class Client {
         System.out.println("INFO: " + serverLocation);
         TransportClient transportClient = new TransportClient(serverLocation);
         List<Employee> employees = transportClient.getEmployees();
+        employees.stream().filter(e -> "Information Technology".equals(e.getDepartment()))
+                .forEachOrdered(e -> System.out.println(e.getFirstName() + " " + e.getLastName()));
         for (int i=0; i<employees.size(); i++) {
             System.out.println((i+1) + " Employee is: " + employees.get(i).toString());
         }
