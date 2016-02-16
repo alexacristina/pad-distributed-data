@@ -14,18 +14,21 @@ import java.net.SocketException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import service.model.Location;
+import service.model.NodeInfo;
 
 public class DiscoveryListener extends Thread {
     private InetSocketAddress nodeAddress;
+    private int neighboursNr;
     
-    public DiscoveryListener(InetSocketAddress nodeAddress) {
+    public DiscoveryListener(InetSocketAddress nodeAddress, int neighboursNr) {
         this.nodeAddress = nodeAddress;
+        this.neighboursNr = neighboursNr;
     }
     
     @Override
     public void run() {
         sendNodeLocation(receiveClientRequest(), 
-                new Location(nodeAddress));
+                new NodeInfo(nodeAddress, neighboursNr));
     }
     
     private Location receiveClientRequest() {
@@ -54,12 +57,12 @@ public class DiscoveryListener extends Thread {
         return clientLocation;
     }
     
-    private void sendNodeLocation(Location clientLocation, Location nodeLocation) {
+    private void sendNodeLocation(Location clientLocation, NodeInfo nodeInfo) {
         try {
             
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
             ObjectOutputStream oos = new ObjectOutputStream(bos);
-            oos.writeObject(nodeLocation);
+            oos.writeObject(nodeInfo);
             oos.flush();
             byte dataSend[] = bos.toByteArray();
             
@@ -67,7 +70,7 @@ public class DiscoveryListener extends Thread {
             DatagramPacket pack = new DatagramPacket(dataSend, 
                                                     dataSend.length,
                                                     clientLocation.getLocation());
-            System.out.println(nodeLocation.toString());
+            System.out.println(nodeInfo.toString());
             socket.send(pack);
             socket.close();
         } catch (SocketException ex) {

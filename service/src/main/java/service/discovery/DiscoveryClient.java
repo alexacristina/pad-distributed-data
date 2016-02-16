@@ -10,34 +10,39 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.MulticastSocket;
-import java.net.SocketException;
 import java.net.SocketTimeoutException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import static java.util.concurrent.TimeUnit.SECONDS;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import service.model.Location;
+import service.model.NodeInfo;
 
 public class DiscoveryClient {
-    private InetSocketAddress clientAddress;
+    private final InetSocketAddress clientAddress;
     
     public DiscoveryClient(InetSocketAddress clientAddress) {
         this.clientAddress = clientAddress;
     }
     
     public Location retrieveNodeInfo() throws IOException {
-        ArrayList <Location> locations = null;
+        ArrayList <NodeInfo> locations = null;
         
         sendLocationRequest();
         locations = getNodesInfo();
         
         if (locations.size() > 0) {
-            return locations.get(0);
+            NodeInfo maven;
+            maven = locations
+                    .stream()
+                    .max(Comparator.comparingInt((nodeInfo) -> nodeInfo.getNeighboursNr()))
+                    .get();
+            return maven;
         }
         else {
             return null;
         }
-        
     }
     
     private void sendLocationRequest() throws IOException {
@@ -55,8 +60,8 @@ public class DiscoveryClient {
         socket.close();
     }
     
-    private ArrayList<Location> getNodesInfo() throws IOException {
-        ArrayList<Location> locations = new ArrayList<>();
+    private ArrayList<NodeInfo> getNodesInfo() throws IOException {
+        ArrayList<NodeInfo> locations = new ArrayList<>();
         DatagramSocket dataReceiverSocket = new DatagramSocket(clientAddress);
         byte receivedData[] = new byte[2048];
         boolean timeOut = false;
@@ -69,15 +74,14 @@ public class DiscoveryClient {
                 dataReceiverSocket.receive(receivePacket);
                 ByteArrayInputStream byteArray = new ByteArrayInputStream(receivedData);
                 ObjectInputStream ois = new ObjectInputStream(byteArray);
-                locations.add((Location) ois.readObject()); 
+                locations.add((NodeInfo) ois.readObject()); 
                 
             } catch(SocketTimeoutException ste) {
-                System.out.println("Time out!");
+                System.out.println("WARNING: Time out!");
                 timeOut = true;
             } catch(ClassNotFoundException ex) {
                 Logger.getLogger(DiscoveryClient.class.getName()).log(Level.SEVERE, null, ex);
             }
-            
         }
         System.out.println("[INFO] Received packet: " + locations.get(0));
         dataReceiverSocket.close();

@@ -1,5 +1,6 @@
 package server;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -13,20 +14,26 @@ import static java.util.concurrent.Executors.newCachedThreadPool;
 import java.util.function.Consumer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import service.discovery.DiscoveryListener;
 import service.model.Employee;
+import service.model.Wrapper;
 import service.model.Location;
+import service.model.NodeInfo;
 import service.transport.TransportClient;
 import service.transport.TransportServer;
+import static java.util.concurrent.Executors.newCachedThreadPool;
 
 public class Server { 
     private static ArrayList <Location> neighbours = new ArrayList<>();
-    static List<Employee> data = new ArrayList<>();
+    static ArrayList<Employee> data = new ArrayList<>();
 
-    public static void main(String[] args) throws FileNotFoundException, IOException {
+    public static void main(String[] args) throws FileNotFoundException, IOException, JAXBException {
         FileInputStream config = new FileInputStream(args[0]);
         JSONObject configJson = new JSONObject(new JSONTokener(config));
 
@@ -49,13 +56,15 @@ public class Server {
         data.addAll(loadDataLocal(args[1]));
         
         TransportServer transportService = new TransportServer(serverAddress, neighbours, data);
-        DiscoveryListener listener = new DiscoveryListener(serverAddress);
+        DiscoveryListener listener = new DiscoveryListener(serverAddress, neighboursJson.length());
         listener.start();      
-        Runnable runnable = () -> {
+        Runnable runnable;
+        runnable = () -> {
             neighbours.forEach((Location cnsmr) -> {
                 try {
-                    data.addAll((Collection) new TransportClient(cnsmr).getEmployees());
-                } catch (IOException | ClassNotFoundException ex) {
+                    data.addAll((Collection) new TransportClient(new Location(serverAddress), cnsmr)
+                        .getEmployees());
+                } catch (IOException | ClassNotFoundException | JAXBException ex) {
                     Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
                 }
             });

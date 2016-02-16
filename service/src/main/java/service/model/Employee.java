@@ -1,12 +1,32 @@
+
+
+
 package service.model;
 
 import java.io.Serializable;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Employee implements Serializable {
-    private String lastName;
-    private String firstName;
-    private String department;
-    private double salary;
+    @XmlElement
+    public String lastName;
+    @XmlElement
+    public String firstName;
+    @XmlElement
+    public String department;
+    @XmlElement
+    public double salary;
+    
+    public Employee() {
+        this.firstName="";
+        this.lastName="";
+        this.department="";
+        this.salary=0;
+    }
     
     public Employee(String firstName, String lastName, String department, Double salary) {
         this.firstName = firstName;
@@ -14,7 +34,7 @@ public class Employee implements Serializable {
         this.department = department;
         this.salary = salary;
     }
-    
+
     public String getDepartment() {
         return this.department;
     }
@@ -26,6 +46,7 @@ public class Employee implements Serializable {
     public String getFirstName() {
         return this.firstName;
     }
+    
     
     public String getLastName() {
         return this.lastName;
